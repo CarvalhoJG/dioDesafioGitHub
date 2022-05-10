@@ -1,0 +1,122 @@
+Git
+Versionamento de codigo.
+-Controle de Versão
+-Armazenamento em nuvem
+-Trabalho em equipe
+-Melhorar seu ódigo
+Reconhecimento
+
+Git Hub
+Repositorio online.
+
+GUI
+Graphical User Interface
+
+vs
+
+CLI
+Command-line interface
+
+Os comandos utilizados nos terminais possuem flags que pode serem descritos como complementos para aprimorar/afinar a execução:
+
+Terminal derivado do Shell
+Win:
+cd(change directory)
+cd .. =>retroceder um nivel
+cls =>Limpa o terminal
+tab =>auto completa a escrita
+dir =>Lista os diretorios contidos na pasta atual
+mkdir nome da pasta => cria uma pasta
+cd =>Navega nas pastas 
+echo =>Printa/imprime na tela o que vc digitou
+echo hello > hello.txt =>adicona a informação no arquivo txt
+dellnome da pasta => Deleta os arquivos da pasta 
+rmdir nome da pasta /s /q =>exclui pasta/diretorio e tudo que ela conter
+git status
+
+git add . => Adiciona no controlador de versão local.
+
+git commit -m "Comentario sobre a atualização feita no arquivo"
+
+git push origin man => Envia todos os comites locais para a nuvem
+
+
+
+
+Terminal derivado do Bash
+Unix
+cd .. retrocede um  nivel
+clear =>Limpa terminal (ctrl + l)
+ls =>Lista os diretorios contidos na pasta atual
+tab =>auto completa a escrita
+mkdir nome da pasta => cria uma pasta
+echo hello > hello.txt =>adicona a informação no arquivo txt
+rm -rf workspace =>exclui pasta/diretorio e tudo que ela conter
+=>
+
+
+
+Objetos fundamentais
+
+echo 'conteudo' | git has -object --stdin
+>fc31e91b26cf85a55e072476de7f263c89260eb1 
+
+echo -e 'blob 9\0conteudo' | openssl sha1
+>>fc31e91b26cf85a55e072476de7f263c89260eb1
+
+
+SHA1
+Secure Hash Algorithm/Algoritmo de Hash Seguro
+Conjunto de funções hash criptograficas projetadas pela NSA(Agecia de Segurança Nascional dos EUA), que gera um conjunto de quarenta digitos chamados de characteres identificador. Cada vês que o arquivo é alterado um novo conjunto de characteres. 
+
+
+echo 'conteudo' | git has -object --stdin
+>fc31e91b26cf85a55e072476de7f263c89260eb1 
+
+****
+Entendendo os comandos:
+echo:
+Imprimir o output e passar o "conteudo" para uma função do git
+
+has -object:
+Calcula o valor do ID do objeto para um objeto com o tipo especificado com o conteúdo do arquivo nomeado
+
+--stdin
+Leia o objeto da entrada padrão em vez de um arquivo.
+****
+
+...
+-
+
+Blobs: 
+É um objeto que armazena metadados sendo eles:
+tipo do objeto, tamanho da string ou desse arquivo, contrabarra zero(\0) e o contudo de fato desse arquivo. Ela é responsável por motar a estrutura de onde esta localizado os arquivos.
+
+echo -e 'blob 9\0conteudo' | openssl sha1
+>fc31e91b26cf85a55e072476de7f263c89260eb1
+
+Trees
+As trees(arvores) armazenam os blobs, contem metadados e o contrabarra zero(\0) aponta para um blob que possiu um SHA1 e o nome do arquivo.
+
+Os blobs tem o sha1 do arquivo, as tree apontam para os blobs que possuem um sha1 encriptado com os metadados das tree para caso ocorra alguma alteração no arquivo o qual a tree esta referindo(apontando) o sha1 desse metadados do blob sofrerá alteração no conjunto de caracteres e será possível ver a alteração do sha1 da tree na sequência
+
+
+Commits
+
+crescente sendo as blobs o bloco basico(base) de composição a tree armazenando e apontando para os tripos de blobs diferentes e os comites
+1:
+identificador é gerado
+Objetivos fundamentais
+Sitema distribuído
+Segurança
+
+
+
+Os blobs tem o sha1 do arquivo, as tree apontam para os blobs que possuem um sha1 encriptado com os metadados das tree para caso ocorra alguma alteração no arquivo o qual a tree esta referindo(apontando) o sha1 desse metadados do blob sofrerá alteração no conjunto de characteres e será possivel ver a alteração do sha1 da tree na sequencia.
+
+
+___________________
+Pesquisar:
+Windows Subsystem for Linux
+
+
