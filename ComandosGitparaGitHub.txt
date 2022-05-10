@@ -1,0 +1,71 @@
+
+Julia@DESKTOP-8OA2GUD MINGW64 /e/Julia/Estudo/Git
+$ git clone https://github.com/GitJG/dioDesafioGitHub.git
+Cloning into 'dioDesafioGitHub'...
+remote: Enumerating objects: 6, done.
+remote: Counting objects: 100% (6/6), done.
+remote: Compressing objects: 100% (4/4), done.
+remote: Total 6 (delta 0), reused 0 (delta 0), pack-reused 0
+Receiving objects: 100% (6/6), done.
+
+Julia@DESKTOP-8OA2GUD MINGW64 /e/Julia/Estudo/Git
+$ cd dioDesafioGitHub/
+
+Julia@DESKTOP-8OA2GUD MINGW64 /e/Julia/Estudo/Git/dioDesafioGitHub (main)
+$ ls
+README.md
+
+Julia@DESKTOP-8OA2GUD MINGW64 /e/Julia/Estudo/Git/dioDesafioGitHub (main)
+$ git status
+On branch main
+Your branch is up to date with 'origin/main'.
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        "Anota\303\247\303\265es.txt"
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+Julia@DESKTOP-8OA2GUD MINGW64 /e/Julia/Estudo/Git/dioDesafioGitHub (main)
+$ git add .
+
+Julia@DESKTOP-8OA2GUD MINGW64 /e/Julia/Estudo/Git/dioDesafioGitHub (main)
+$ git add -A
+
+Julia@DESKTOP-8OA2GUD MINGW64 /e/Julia/Estudo/Git/dioDesafioGitHub (main)
+$ git status
+On branch main
+Your branch is up to date with 'origin/main'.
+
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        new file:   "Anota\303\247\303\265es.txt"
+
+
+Julia@DESKTOP-8OA2GUD MINGW64 /e/Julia/Estudo/Git/dioDesafioGitHub (main)
+$ git commit -m "Teste commit, anotações das videos aulas DIO"
+[main bd8f485] Teste commit, anotações das videos aulas DIO
+ 1 file changed, 122 insertions(+)
+ create mode 100644 "Anota\303\247\303\265es.txt"
+
+Julia@DESKTOP-8OA2GUD MINGW64 /e/Julia/Estudo/Git/dioDesafioGitHub (main)
+$ git status
+On branch main
+Your branch is ahead of 'origin/main' by 1 commit.
+  (use "git push" to publish your local commits)
+
+nothing to commit, working tree clean
+
+Julia@DESKTOP-8OA2GUD MINGW64 /e/Julia/Estudo/Git/dioDesafioGitHub (main)
+$ git push origin main
+Enumerating objects: 4, done.
+Counting objects: 100% (4/4), done.
+Delta compression using up to 12 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 1.81 KiB | 1.81 MiB/s, done.
+Total 3 (delta 0), reused 0 (delta 0), pack-reused 0
+To https://github.com/GitJG/dioDesafioGitHub.git
+   7e3c4d0..bd8f485  main -> main
+
+Julia@DESKTOP-8OA2GUD MINGW64 /e/Julia/Estudo/Git/dioDesafioGitHub (main)
+$
