@@ -1,1 +1,9 @@
 git init =>inicia um repositorio 
+
+git add . => para incluir todos os arquivos
+ou 
+git add nomeDoArquicoEspecifico =>para especificar um unico arquivo
+
+git commit -m "mensagem" => mansagem a ser vinculada ao comite do arquivo
+
+it push origin main => Enviando(empurrando) para o repositorio de origem no caso o main(principal)
